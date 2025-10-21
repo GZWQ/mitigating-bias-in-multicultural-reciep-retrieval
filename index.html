@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Mitigating Cross-modal Representation Bias via Casaul Inference">
+  <meta name="keywords" content="Seeing Culture, Visual Reasoning, Grounding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Multicultural Image-to-Recipe Retrieval</title>
+
+  <link rel="icon" href="./static/images/logo-sea-white.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+  <script src="./static/js/leaderboard_testmini.js"></script>  
+  <script src="./data/results/output_folders.js" defer></script>
+  <script src="./data/results/model_scores.js" defer></script>
+
+  <script src="./visualizer/data/data_public.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="static/images/logo-sea-white.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="logo-sea-white" style="vertical-align: middle">Seeing Culture Benchmark</span>
+            </h1>
+              <h2 class="subtitle is-3 publication-subtitle">
+                Evaluating Visual Reasoning and Grounding in Cultural Context
+              </h2>
+              <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://buraksatar.github.io/">Burak Satar</a><sup style="color:#6fbf73;">1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=HM39HrUAAAAJ">Chong-Wah Ngo</a><sup style="color:#ffac33">1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://zhixinma.github.io/">Yu Cao</a><sup style="color:#6fbf73;">1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=r0wOAikAAAAJ">Ee-Peng Lim</a><sup style="color:#ed4b82">1</sup>,
+              </span>
+        </div>
+
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"><sup style="color:#6fbf73;">1</sup>Singapore Management University,</span>
+          <span class="paper-block"><b style="color:#f41c1c">MM 2025</b> </span>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="publication-links">
+            <!-- PDF Link. -->
+            <span class="link-block">
+              <a href="https://arxiv.org/pdf/2509.16517"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2509.16517"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+              </a>
+            </span>
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a href="https://github.com/buraksatar/seeingculture"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code</span>
+              </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/Multimedia-SMU/seeingculture-benchmark"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><p style="font-size:18px">🤗</p></span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths" style="width: 100%;">
+          <h2 class="title is-3">Mitigating Cross-modal Representation Bias for Multicultural Image-to-Recipe Retrieval</h2>
+          <div class="content has-text-justified">
+              <img src="static/images/teaser.png" style="width: 100%;"/>
+              <h2 class="title is-3">Abstract</h2>
+              <p>
+                Existing approaches for image-to-recipe retrieval have the implicit assumption that a food image can fully capture the details textually documented in its recipe. However, a food image only reflects the visual outcome of a cooked dish and not the underlying cooking process. Consequently, learning cross-modal representations to bridge the modality gap between images and recipes tends to ignore subtle, recipe-specific details that are not visually apparent but are crucial for recipe retrieval. Specifically, the representations are biased to capture the dominant visual elements, resulting in difficulty in ranking similar recipes with subtle differences in use of ingredients and cooking methods. The bias in representation learning is expected to be more severe when the training data is mixed of images and recipes sourced from different cuisines. This paper proposes a novel causal approach that predicts the culinary elements potentially overlooked in images, while explicitly injecting these elements into cross-modal representation learning to mitigate biases. Experiments are conducted on the standard monolingual Recipe1M dataset and a newly curated multilingual multicultural cuisine dataset. The results indicate that the proposed causal representation learning is capable of uncovering subtle ingredients and cooking actions and achieves impressive retrieval performance on both monolingual and multilingual multicultural datasets.
+              </p>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths" style="width: 100%;">
+          <h2 class="title is-3">Dataset Sample</h2>
+          <div class="content has-text-justified">
+              <div class="content has-text-centered">
+                <img src="static/images/dataset_sample1.png" style="width: 100%;"/>
+              </div>
+              <div class="content has-text-centered">
+                <img src="static/images/dataset_sample2.png" style="width: 100%;"/>
+                <p>
+                  The presented collection of images from our SCB encompasses visual representations of cultural concepts from seven countries, categorized across five dimensions: music, game, dance, celebration, and wedding. These images exhibit either a variety of cultural artifacts situated in diverse contexts (e.g., the depiction of the <i>balinese legong dance</i> showcases multiple characters, two <i>princesses rangkesari</i>, and one <i>condong</i>, with corresponding questions) or integrated distractors in addition to the primary concept (e.g., the image featuring the <i>banduria</i>, which displays Spanish guitars on the right side while the <i>bandurias</i> are positioned on the left).
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths" style="width: 100%;">
+          <h2 class="title is-3">Data Analysis</h2>
+          <div class="content has-text-justified">
+              <div class="content has-text-centered">
+                <img src="static/images/word_cloud.png" style="width: 100%;"/>
+                <p>
+                  Word clouds illustrating the concepts of 1,093 unique questions in SCB are categorized into five cultural themes: wedding, game, music, celebration, and dance. The variation in font size within these clouds reflects the frequency of concept occurrences relevant to each theme. A simplified form for better visualization.
+                </p>
+              </div>
+              <div class="content has-text-centered">
+                <img src="static/images/dist_country.png" style="width: 100%;"/>
+              </div>
+              <div class="content has-text-centered">
+                <img src="static/images/dist_category.png" style="width: 100%;"/>
+                <p>
+                  The figures encompass a comprehensive analysis of the distribution of unique questions, concepts, and the average length of questions, segmented by both country and category.
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths" style="width: 100%;">
+          <h2 class="title is-3">Quantitative Results</h2>
+          <div class="content has-text-justified">
+            <div class="content has-text-centered">
+              <img src="static/images/res_table.png" style="width: 90%;"/>
+              <p>
+                Detailed performance benchmark with several VLMs on our Visual Reasoning and Grounding task. The upper section focuses on open-source VLMs, whereas the lower section pertains to closed-source models. Type 1 is defined as <i>within culture</i>, Type 2 as <i>across culture</i>, and Type 3 represents a balanced combination of both Type 1 and Type 2.
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <img src="static/images/res_radar.png" style="width: 95%;"/>
+              <p>
+                The overall multiple-choice VQA accuracy of certain VLMs across different countries and categories.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths" style="width: 100%;">
+          <h2 class="title is-3">Qualitative Results</h2>
+          <div class="content has-text-justified">
+            <div class="content has-text-centered">
+              <img src="static/images/qualitative.png" style="width: 100%;"/>
+              <p>
+                The figure presents two examples of failures for each stage. The left side illustrates an example of multiple-choice VQA, where all VLMs fail to select the correct option. Conversely, the right side pertains to the spatial grounding, for another example. Notably, this specific output is generated by GPT-o3, which is the only VLM that accurately answers the multiple-choice VQA version of this spatial grounding question. The blue character on the far left identifies the correct segment, while GPT-o3 incorrectly selects the option on the far right.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 mathvista_other" id="citation"><span class="mathvista" style="vertical-align: middle">Citation</span></h1>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <pre>
+      <code>
+        @misc{satar2025seeingculturebenchmarkvisual,
+              title={Seeing Culture: A Benchmark for Visual Reasoning and Grounding}, 
+              author={Burak Satar and Zhixin Ma and Patrick A. Irawan and Wilfried A. Mulyawan and Jing Jiang and Ee-Peng Lim and Chong-Wah Ngo},
+              year={2025},
+              eprint={2509.16517},
+              archivePrefix={arXiv},
+              primaryClass={cs.CV},
+              url={https://arxiv.org/abs/2509.16517}, 
+        }
+      </code>
+    </pre>
+  </div>
+</section>
+
+<section>
+  <div class="section" id="org-banners" style="display:fle">
+    <a href="" target="_blank" rel="external">
+      <img class="center-block org-banner" src="static/images/logo-smu.svg" style="height:17em">
+    </a>
+    <a href="" target="blank" class="ext-link">
+      <img class="center-block org-banner" src="static/images/logo-bandung.png" style="height:12em">
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <div style="text-align: center;">
+            <a href="https://mapmyvisitors.com/web/1bzhj" title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=JKUiPCaOKSCc7_xEPfCg8NpmyM4PPnQZO7M_aO3jlcw&cl=ffffff"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 
+    <div align="center">
+        <img alt="Visitor Stats" 
+            src="https://widgetbite.com/stats/seeingculture-benchmark"/>  
+    </div>
+    -->
+  <!-- </div> -->
+</footer>
+
+</body>
+</html>
