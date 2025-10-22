@@ -163,21 +163,12 @@
   <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths" style="width: 100%;">
-          <h2 class="title is-3">Data Analysis</h2>
+          <h2 class="title is-3">Multi-lingual Multi-cultural Recipe retrieval</h2>
           <div class="content has-text-justified">
               <div class="content has-text-centered">
-                <img src="static/images/word_cloud.png" style="width: 100%;"/>
+                <img src="static/images/multilingual_framework.png" style="width: 100%;"/>
                 <p>
-                  Word clouds illustrating the concepts of 1,093 unique questions in SCB are categorized into five cultural themes: wedding, game, music, celebration, and dance. The variation in font size within these clouds reflects the frequency of concept occurrences relevant to each theme. A simplified form for better visualization.
-                </p>
-              </div>
-              <div class="content has-text-centered">
-                <img src="static/images/dist_country.png" style="width: 100%;"/>
-              </div>
-              <div class="content has-text-centered">
-                <img src="static/images/dist_category.png" style="width: 100%;"/>
-                <p>
-                  The figures encompass a comprehensive analysis of the distribution of unique questions, concepts, and the average length of questions, segmented by both country and category.
+                  The proposed framework for multicultural recipe retrieval. Given a query image of Culture X, the ingredient and action debiasing modules in the culture will derive the embeddings $e_{Act}$ and $e_{Ing}$, respectively. The two embeddings are then added to the image embedding, $e_I$, learnt globally in the cross-modal retrieval module for alleviating representation biases. Please refer to Figure~\ref{fig:subfig_ingre_debiasing} and Figure~\ref{fig:subfig_action_debiasing} for the architectures of ingredient debiaisng module and action debiasing module, respectively.
                 </p>
               </div>
           </div>
