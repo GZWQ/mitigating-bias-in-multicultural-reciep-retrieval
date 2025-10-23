@@ -212,15 +212,15 @@
           <h2 class="title is-3">Quantitative Results</h2>
           <div class="content has-text-justified">
             <div class="content has-text-centered">
-              <img src="static/images/res_table.png" style="width: 90%;"/>
+              <img src="static/images/recipe1m.png" style="width: 90%;"/>
               <p>
-                Detailed performance benchmark with several VLMs on our Visual Reasoning and Grounding task. The upper section focuses on open-source VLMs, whereas the lower section pertains to closed-source models. Type 1 is defined as <i>within culture</i>, Type 2 as <i>across culture</i>, and Type 3 represents a balanced combination of both Type 1 and Type 2.
+                Comparison on 1k and 10k test sets for image-to-recipe retrieval. medR ($\downarrow$), Recall@k ($\uparrow$) are reported. The proposed debiasing boosts the performance of existing cross-modal retrieval methods (H-T, TFood, VLPCook), especially on the 10k set. 
               </p>
             </div>
             <div class="content has-text-centered">
-              <img src="static/images/res_radar.png" style="width: 95%;"/>
+              <img src="static/images/cookpad.png" style="width: 95%;"/>
               <p>
-                The overall multiple-choice VQA accuracy of certain VLMs across different countries and categories.
+                Performance of multicultural recipe retrieval. ``Oracle" assumes the culture of a search query is known. ``Classifier" predicts the culture of a query for retrieval.
               </p>
             </div>
           </div>
