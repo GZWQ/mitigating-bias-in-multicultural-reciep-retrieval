@@ -35,14 +35,15 @@
 
   <script src="./visualizer/data/data_public.js" defer></script>
   <script>
-  MathJax = {
-    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-    svg: { fontCache: 'global' }
-  };
-</script>
-<script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
 </head>
 <body>
 
@@ -112,7 +113,7 @@
             </span>
             <!-- Code Link. -->
             <span class="link-block">
-              <a href="https://github.com/buraksatar/seeingculture"
+              <a href="https://github.com/GZWQ/multilingual-image-recipe-retrieval"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon"><i class="fab fa-github"></i></span>
                 <span>Code</span>
@@ -177,7 +178,25 @@
               <div class="content has-text-centered">
                 <img src="static/images/multilingual_framework.png" style="width: 100%;"/>
                 <p>
-                  The proposed framework for multicultural recipe retrieval. Given a query image of Culture X, the ingredient and action debiasing modules in the culture will derive the embeddings $e_{Act}$ and $e_{Ing}$, respectively. The two embeddings are then added to the image embedding, $e_I$, learnt globally in the cross-modal retrieval module for alleviating representation biases. Please refer to Figure~\ref{fig:subfig_ingre_debiasing} and Figure~\ref{fig:subfig_action_debiasing} for the architectures of ingredient debiaisng module and action debiasing module, respectively.
+                  The proposed framework for multicultural recipe retrieval. Given a query image of Culture X, the ingredient and action debiasing modules in the culture will derive the embeddings $e_{Act}$ and $e_{Ing}$, respectively. The two embeddings are then added to the image embedding, $e_I$, learnt globally in the cross-modal retrieval module for alleviating representation biases.
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths" style="width: 80%;">
+          <h2 class="title is-3">Ingredient and Action Debiasing Modules</h2>
+          <div class="content has-text-justified">
+              <div class="content has-text-centered">
+                <img src="static/images/tgt.png" style="width: 100%;"/>
+                <p>
+                  Left: The ingredient debiasing module takes image embeddings $e_I$ act as keys and values, and ingredient label embeddings as queries. The decoder output is passed to a sigmoid to produce ingredient probabilities $P_{ing}$, which weight the dictionary $D_{ing}$ to yield the debiasing embedding $e_{Ing}$. Right: The action debiasing takes the predicted ingredients as input. For each ingredient $e_{Ing_k}$, we generate the sequence of cooking actions, and then retrieve the corresponding action embeddings from the dictionary $D_{act}$. We normalize the action prediction probabilities to weight each action embedding, and then compute a weighted sum of the embeddings to obtain the action embedding $e^k_{Act}$. The final action embedding, $e_{Act}$, used to enhance the image representation, is obtained by first normalizing the ingredient probabilities and then using probabilities to compute a weighted sum of the action embeddings, $e^k_{Act}$, corresponding to each ingredient. Decoders are shared by all ingredients for generation.
                 </p>
               </div>
           </div>
