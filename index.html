@@ -138,9 +138,9 @@
   <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths" style="width: 100%;">
-          <h2 class="title is-3">Mitigating Cross-modal Representation Bias for Multicultural Image-to-Recipe Retrieval</h2>
+          <!-- <h2 class="title is-3">Mitigating Cross-modal Representation Bias for Multicultural Image-to-Recipe Retrieval</h2> -->
           <div class="content has-text-justified">
-              <img src="static/images/teaser.png" style="width: 100%;"/>
+              <!-- <img src="static/images/teaser.png" style="width: 100%;"/> -->
               <h2 class="title is-3">Abstract</h2>
               <p>
                 Existing approaches for image-to-recipe retrieval have the implicit assumption that a food image can fully capture the details textually documented in its recipe. However, a food image only reflects the visual outcome of a cooked dish and not the underlying cooking process. Consequently, learning cross-modal representations to bridge the modality gap between images and recipes tends to ignore subtle, recipe-specific details that are not visually apparent but are crucial for recipe retrieval. Specifically, the representations are biased to capture the dominant visual elements, resulting in difficulty in ranking similar recipes with subtle differences in use of ingredients and cooking methods. The bias in representation learning is expected to be more severe when the training data is mixed of images and recipes sourced from different cuisines. This paper proposes a novel causal approach that predicts the culinary elements potentially overlooked in images, while explicitly injecting these elements into cross-modal representation learning to mitigate biases. Experiments are conducted on the standard monolingual Recipe1M dataset and a newly curated multilingual multicultural cuisine dataset. The results indicate that the proposed causal representation learning is capable of uncovering subtle ingredients and cooking actions and achieves impressive retrieval performance on both monolingual and multilingual multicultural datasets.
@@ -236,13 +236,13 @@
           <h2 class="title is-3">Qualitative Results</h2>
           <div class="content has-text-justified">
             <div class="content has-text-centered">
-                <img src="static/images/dataset_sample1.png" style="width: 100%;"/>
+                <img src="static/images/ret2action_1.png" style="width: 60%;"/>
                 <p>
                 Example showing how the ingredient and action debiasing disambiguates similar recipes. The first row displays the query image, predicted ingredients, and predicted actions. The second row is the retrieved recipe by H-T+ingredient and H-T+action, while the last row is the recipe retrieved by H-T+both. The correctly predicted ingredients and cooking actions are bolded. The predicted ingredients and cooking actions are marked in red and blue, respectively, in the recipes. The ground-truth is boxed in blue.
               </p>
               </div>
             <div class="content has-text-centered">
-              <img src="static/images/cookpad_qualitative.png" style="width: 100%;"/>
+              <img src="static/images/cookpad_qualitative.png" style="width: 50%;"/>
               <p>
                 Example showing how the ingredient and action debiasing disambiguates similar recipes across cultures. The first row displays the query image, ingredients and actions predicted by debiasing modules. The following rows show the top-1 retrieved recipes (and the ground-truth images) by different debiasing modules. The ingredients and actions correctly predicted are marked in red and blue, respectively.
               </p>
